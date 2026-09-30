@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketSmart AI - Budget King</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;padding:20px;color:white}
+        .container{max-width:500px;margin:auto}
+        .header{text-align:center;padding:30px 0}
+        .header h1{font-size:32px}
+        .card{background:white;color:#333;padding:25px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+        input,select{width:100%;padding:14px;margin:10px 0;border:2px solid #eee;border-radius:12px;font-size:16px}
+        button{width:100%;padding:14px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border:none;border-radius:12px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:10px}
+        button:hover{transform:scale(1.02)}
+        .result{margin-top:20px;background:#f8fafc;padding:20px;border-radius:12px;border-left:5px solid #667eea;color:#1e293b;white-space:pre-wrap;line-height:1.6}
+        .product-card{background:#fff;border:2px solid #e2e8f0;padding:15px;border-radius:12px;margin:10px 0}
+        .footer{text-align:center;margin-top:20px;opacity:0.8;font-size:13px}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛒 PocketSmart AI</h1>
+            <p>Budget ku etha Smart Shopping</p>
+        </div>
+
+        <div class="card">
+            <form method="POST">
+                <label>💰 Unga Budget (Rs)</label>
+                <input type="number" name="budget" placeholder="Ex: 15000" required>
+                
+                <label>📦 Category</label>
+                <select name="category">
+                    <option value="Mobile">📱 Mobile</option>
+                    <option value="Laptop">💻 Laptop</option>
+                    <option value="Headphones">🎧 Headphones</option>
+                    <option value="Furniture">🪑 IKEA Furniture</option>
+                    <option value="Home Appliances">🏠 Home Appliances</option>
+                </select>
+
+                <label>🤔 Enna venum nu sollu di</label>
+                <input type="text" name="need" placeholder="Ex: Gaming ku nalla phone">
+                
+                <button type="submit">✨ Best Deals Kaanu</button>
+            </form>
+
+            {% if answer %}
+            <div class="result">
+                <h3>🎉 Muthu ku Best Recommendations:</h3><br>
+                {{ answer }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="footer">
+            Made with ❤️ by Muthu for PocketSmart
+        </div>
+    </div>
+</body>
+</html>

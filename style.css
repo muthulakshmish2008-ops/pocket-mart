@@ -1,0 +1,78 @@
+/* PocketSmart AI - Smart Budget Assistant */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #000;
+  text-align: center;
+}
+
+.balance-card h2 { font-size: 36px; }
+
+.input-group { display: flex; gap: 10px; margin-top: 15px; }
+
+input, select {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover { background: #5a67d8; transform: scale(1.05); }
+
+.expense-list li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.ai-response {
+  background: #f7f7ff;
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
